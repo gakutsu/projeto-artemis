@@ -146,7 +146,7 @@ body.dark-mode .beer-card {
     border-radius: 30px;
     background:
         linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.45)),
-        url('../img/logo-secundario-artemis.jpeg') center/cover;
+        url('../img/garrafa.jpg') center/cover;
 }
 
 .floating-info {
