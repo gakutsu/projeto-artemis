@@ -1,0 +1,77 @@
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: grid;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 78px;
+        right: -100%;
+        width: min(320px, 90%);
+        height: calc(100vh - 78px);
+        background: var(--bg-soft);
+        border-left: 1px solid var(--border);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 34px;
+        transition: 0.3s ease;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .process-area,
+    .cta-box,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .beer-card {
+        min-height: 460px;
+    }
+
+    .floating-info {
+        left: 20px;
+        bottom: 22px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: min(100% - 24px, 1180px);
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-stats,
+    .cards-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item.large {
+        grid-row: span 1;
+    }
+
+    .cta-box {
+        padding: 34px 24px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}

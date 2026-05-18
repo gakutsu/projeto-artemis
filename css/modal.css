@@ -1,0 +1,232 @@
+ /* MODAL */
+ .modal-overlay {
+     position: fixed;
+     inset: 0;
+     background: rgba(0, 0, 0, 0.58);
+     display: none;
+     align-items: center;
+     justify-content: center;
+     z-index: 2000;
+     padding: 20px;
+ }
+
+ .modal-overlay.active {
+     display: flex;
+ }
+
+ .modal-box {
+     width: min(920px, 100%);
+     background: var(--bg-soft);
+     color: var(--text);
+     border-radius: 32px;
+     padding: 30px;
+     border: 1px solid var(--border);
+     box-shadow: var(--shadow);
+     position: relative;
+     animation: modalUp 0.28s ease;
+ }
+
+ @keyframes modalUp {
+     from {
+         opacity: 0;
+         transform: translateY(24px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ .modal-close {
+     position: absolute;
+     right: 18px;
+     top: 18px;
+     width: 38px;
+     height: 38px;
+     border: none;
+     border-radius: 50%;
+     background: var(--card);
+     color: var(--text);
+     cursor: pointer;
+ }
+
+ .modal-icon {
+     width: 56px;
+     height: 56px;
+     border-radius: 18px;
+     display: grid;
+     place-items: center;
+     background: rgba(201, 131, 34, 0.13);
+     color: var(--primary);
+     font-size: 1.4rem;
+     margin-bottom: 18px;
+ }
+
+ .modal-box h2 {
+     margin-bottom: 12px;
+     letter-spacing: -1px;
+ }
+
+ .modal-box p {
+     color: var(--muted);
+     line-height: 1.75;
+ }
+
+ /* =========================================
+   IMAGEM DO MODAL
+========================================= */
+
+.modal-image {
+    width: 100%;
+    max-width: 500px; /* diminui tamanho */
+    display: block;
+    margin: 0 auto 30px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+    .modal-image {
+        max-width: 100%;
+    }
+
+}
+
+ /* popup processo */
+ /* OVERLAY */
+ .process-modal-overlay {
+     position: fixed;
+     inset: 0;
+     background: rgba(0, 0, 0, 0.65);
+     display: none;
+     align-items: center;
+     justify-content: center;
+     padding: 20px;
+     z-index: 9999;
+
+     backdrop-filter: blur(6px);
+ }
+
+ .process-modal-overlay.active {
+     display: flex;
+ }
+
+ /* BOX */
+ .process-modal-box {
+     position: relative;
+     width: min(760px, 100%);
+     background: #f7f3ed;
+     border-radius: 32px;
+     overflow: hidden;
+     box-shadow:
+         0 30px 80px rgba(0, 0, 0, 0.25);
+     animation: modalUp 0.28s ease;
+ }
+
+ /* ANIMAÇÃO */
+ @keyframes modalUp {
+     from {
+         opacity: 0;
+         transform: translateY(30px) scale(.96);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0) scale(1);
+     }
+ }
+
+ /* BOTÃO FECHAR */
+ .process-modal-close {
+     position: absolute;
+     top: 18px;
+     right: 18px;
+
+     width: 52px;
+     height: 52px;
+
+     border: none;
+     border-radius: 50%;
+
+     background: rgba(255, 255, 255, 0.95);
+     color: #123f4c;
+
+     font-size: 1rem;
+     cursor: pointer;
+
+     z-index: 10;
+
+     transition: 0.25s ease;
+ }
+
+ .process-modal-close:hover {
+     transform: rotate(90deg);
+ }
+
+ /* IMAGEM */
+ .process-modal-banner {
+     width: 100%;
+     height: 320px;
+     overflow: hidden;
+ }
+
+ .process-modal-banner img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ /* CONTEÚDO */
+ .process-modal-content {
+     padding: 34px;
+ }
+
+ .process-modal-badge {
+     display: inline-flex;
+     align-items: center;
+     gap: 8px;
+     padding: 10px 14px;
+     border-radius: 999px;
+     background: rgba(201, 131, 34, 0.12);
+     color: #c98322;
+     font-size: 0.85rem;
+     font-weight: 800;
+     margin-bottom: 18px;
+ }
+
+ .process-modal-content h2 {
+     font-size: 3rem;
+     line-height: 1;
+     letter-spacing: -2px;
+
+     color: #103c49;
+
+     margin-bottom: 18px;
+ }
+
+ .process-modal-content p {
+     font-size: 1.08rem;
+     line-height: 1.9;
+
+     color: #667085;
+ }
+
+ /* RESPONSIVO */
+ @media (max-width: 768px) {
+
+     .process-modal-banner {
+         height: 220px;
+     }
+
+     .process-modal-content {
+         padding: 26px;
+     }
+
+     .process-modal-content h2 {
+         font-size: 2.1rem;
+     }
+
+ }

@@ -1,0 +1,18 @@
+ :root {
+     --bg: #fbf7ef;
+     --bg-soft: #fffaf2;
+     --transparent: #ffffff07;
+     --card: rgba(255, 255, 255, 0.82);
+     --text: #1f2933;
+     --text-popup: #e4e4e4;
+     --title-hero: #fffaf2;
+     --text-hero: #ebe7e1;
+     --muted: #667085;
+     --primary: #c98322;
+     --primary-dark: #9c6316;
+     --accent: #f3c36b;
+     --border: rgba(31, 41, 51, 0.1);
+     --shadow: 0 20px 50px rgba(64, 46, 23, 0.12);
+     --radius: 24px;
+     --footer: #18140f;
+ }

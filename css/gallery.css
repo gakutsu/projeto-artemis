@@ -1,0 +1,133 @@
+/* SECTION */
+.qr-section {
+    position: relative;
+    padding: 120px 0;
+    background:
+        radial-gradient(circle at top,
+            rgba(201, 131, 34, 0.12),
+            transparent 35%),
+        linear-gradient(to bottom,
+            #171008,
+            #22160a);
+    overflow: hidden;
+}
+
+/* WRAPPER */
+.qr-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 34px;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+/* CARD */
+.qr-card {
+    position: relative;
+    width: 320px;
+    min-height: 420px;
+    padding: 34px;
+    border-radius: 34px;
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.03));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    overflow: hidden;
+    transition: 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* GLOW */
+.qr-glow {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle,
+            rgba(201, 131, 34, 0.22),
+            transparent 70%);
+    top: -80px;
+    right: -80px;
+}
+
+/* HOVER */
+.qr-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 178, 36, 0.404);
+    box-shadow:
+        0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* IMG */
+.qr-card img {
+    position: relative;
+    z-index: 2;
+    width: 190px;
+    height: 190px;
+    object-fit: contain;
+    background: #fff;
+    padding: 14px;
+    border-radius: 28px;
+    margin-bottom: 28px;
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.22);
+}
+
+/* CONTENT */
+.qr-content {
+    position: relative;
+    z-index: 2;
+}
+
+.qr-content strong {
+    display: block;
+    color: var(--text);
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.qr-content span {
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 0.96rem;
+}
+
+/* MINIGAME */
+.minigame-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.minigame-btn {
+    padding: 18px 34px;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 800;
+    gap: 12px;
+    box-shadow:
+        0 18px 45px rgba(201, 131, 34, 0.28);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+    .qr-wrapper {
+        gap: 24px;
+    }
+
+    .qr-card {
+        width: 100%;
+        max-width: 340px;
+    }
+
+}

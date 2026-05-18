@@ -1,0 +1,238 @@
+/* PROCESSO */
+.section-process {
+    /* FUNDO RÚSTICO */
+    background:
+        linear-gradient(to right,
+            rgba(24, 16, 8, 0.88) 0%,
+            rgba(24, 16, 8, 0.72) 35%,
+            rgba(24, 16, 8, 0.30) 70%,
+            rgba(24, 16, 8, 0.15) 100%),
+        url("../img/background-about.png") center/cover no-repeat;
+}
+
+.process-area {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.process-about {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.process-card {
+    position: relative;
+    min-height: 330px;
+    padding: 28px;
+    border-radius: 30px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.35s ease;
+}
+
+.process-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(145deg, rgba(201, 131, 34, 0.18), transparent 60%);
+    opacity: 0;
+    transition: 0.35s ease;
+}
+
+.process-card::after {
+    content: "";
+    position: absolute;
+    right: -45px;
+    bottom: -45px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(201, 131, 34, 0.10);
+}
+
+.process-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(201, 131, 34, 0.38);
+}
+
+.process-card:hover::before {
+    opacity: 1;
+}
+
+.process-icon {
+    position: relative;
+    z-index: 1;
+    width: 62px;
+    height: 62px;
+    border-radius: 22px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 1.35rem;
+    margin-bottom: 26px;
+    box-shadow: 0 16px 28px rgba(201, 131, 34, 0.28);
+}
+
+.process-number {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    padding: 8px 13px;
+    border-radius: 999px;
+    background: rgba(201, 131, 34, 0.12);
+    color: var(--primary);
+    font-size: 0.82rem;
+    font-weight: 900;
+    margin-bottom: 18px;
+}
+
+.process-card h3 {
+    position: relative;
+    z-index: 1;
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.process-card p {
+    position: relative;
+    z-index: 1;
+    color: var(--muted);
+    line-height: 1.65;
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+}
+
+.process-action {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+    font-weight: 900;
+    font-size: 0.92rem;
+    transition: .75s ease;
+}
+
+.process-action i {
+    transition: 0.25s ease;
+}
+
+.process-card:hover .process-action i {
+    transform: translateX(5px);
+}
+
+.process-action:hover{
+    transform: scale(1.04);
+}
+
+/* MODAL */
+.process-modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.58);
+    z-index: 9999;
+}
+
+.process-modal-overlay.active {
+    display: flex;
+}
+
+.process-modal-box {
+    position: relative;
+    width: min(920px, 100%);
+    padding: 34px;
+    border-radius: 32px;
+    background: var(--bg-soft);
+    color: var(--text);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    animation: processModalUp 0.28s ease;
+}
+
+@keyframes processModalUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.process-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: var(--card);
+    color: var(--text);
+    cursor: pointer;
+}
+
+.process-modal-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    background: rgba(201, 131, 34, 0.14);
+    color: var(--primary);
+    font-size: 1.45rem;
+    margin-bottom: 20px;
+}
+
+.process-modal-box h2 {
+    font-size: 1.7rem;
+    margin-bottom: 12px;
+}
+
+.process-modal-box p {
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+/* imagem popup */
+.process-icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 22px;
+}
+
+.process-action img {
+    width: 30px;
+    rotate: calc(-90deg);
+    transition: .75s ease;
+}
+
+.process-action img:hover {
+    rotate: calc(-135deg);
+}
+
+/* RESPONSIVO */
+@media (max-width: 992px) {
+    .process-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .process-area {
+        grid-template-columns: 1fr;
+    }
+}

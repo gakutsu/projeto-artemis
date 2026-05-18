@@ -1,0 +1,23 @@
+ .theme-toggle,
+ .menu-toggle {
+     width: 44px;
+     height: 44px;
+     border-radius: 50%;
+     border: 1px solid var(--border);
+     background: var(--card);
+     color: var(--text);
+     display: grid;
+     place-items: center;
+     cursor: pointer;
+     transition: 0.25s ease;
+ }
+
+ .theme-toggle:hover,
+ .menu-toggle:hover {
+     transform: translateY(-2px);
+     color: var(--primary);
+ }
+
+ .menu-toggle {
+     display: none;
+ }

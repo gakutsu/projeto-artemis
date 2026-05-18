@@ -1,0 +1,100 @@
+ /* FOOTER */
+ .footer {
+     background: var(--footer);
+     color: #fff;
+     padding: 60px 0 26px;
+ }
+
+ .footer-grid {
+     display: grid;
+     grid-template-columns: 1.3fr 0.7fr 0.7fr 0.9fr;
+     gap: 34px;
+     margin-bottom: 40px;
+ }
+
+ .footer-logo {
+     display: flex;
+     align-items: center;
+     gap: 16px;
+ }
+
+ /* ÁREA DA LOGO */
+ .footer-logo .logo-icon {
+     width: 100px;
+     height: 100px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 22px;
+     overflow: hidden;
+     background: rgba(255, 255, 255, 0.06);
+     padding: 6px;
+     margin-bottom: 20px;
+ }
+
+ /* IMAGEM */
+ .footer-logo .logo-icon img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     border-radius: 18px;
+ }
+
+ /* TEXTO */
+ .footer-logo span:last-child {
+     font-size: 1.4rem;
+     font-weight: 800;
+     color: #fff;
+     letter-spacing: -1px;
+ }
+
+ .footer p,
+ .footer a {
+     color: rgba(255, 255, 255, 0.72);
+     line-height: 1.7;
+     font-size: 0.94rem;
+ }
+
+ .footer h3 {
+     font-size: 1rem;
+     margin-bottom: 15px;
+ }
+
+ .footer ul {
+     list-style: none;
+     display: grid;
+     gap: 9px;
+ }
+
+ .footer a:hover {
+     color: var(--accent);
+ }
+
+ .socials {
+     display: flex;
+     gap: 10px;
+     margin-top: 18px;
+     align-items: center;
+     font-size: 16px;
+     font-family: 'Inter', sans-serif;
+     font-weight: 800;
+ }
+
+ .socials a {
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     display: grid;
+     place-items: center;
+     background: rgba(255, 255, 255, 0.08);
+     color: #fff;
+ }
+
+ .footer-bottom {
+     border-top: 1px solid rgba(255, 255, 255, 0.1);
+     padding-top: 22px;
+     display: flex;
+     justify-content: space-between;
+     gap: 20px;
+     flex-wrap: wrap;
+ }

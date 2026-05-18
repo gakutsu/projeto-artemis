@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ártemis | Cerveja Artesanal</title>
+
+    <!-- icone guia -->
+    <link rel="shortcut icon" href="img/logo Artemis.png" type="image/x-icon">
+    <link rel="icon" href="img/logo Artemis.png" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- style botão -->
+    <link rel="stylesheet" href="css/buttons.css">
+    <!-- style botão -->
+
+    <!-- style cards -->
+    <link rel="stylesheet" href="css/cards.css">
+    <!-- style cards -->
+
+    <!-- style modo escuro -->
+    <link rel="stylesheet" href="css/darkmode.css">
+    <!-- style modo escuro -->
+
+    <!-- style footer -->
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- style footer -->
+
+    <!-- style galerias -->
+    <link rel="stylesheet" href="css/gallery.css">
+    <!-- style galerias -->
+
+    <!-- style header -->
+    <link rel="stylesheet" href="css/header.css">
+    <!-- style header -->
+
+    <!-- style introdução -->
+    <link rel="stylesheet" href="css/hero.css">
+    <!-- style introdução -->
+
+    <!-- style logos -->
+    <link rel="stylesheet" href="css/logos.css">
+    <!-- style logos -->
+
+    <!-- style menus -->
+    <link rel="stylesheet" href="css/menu.css">
+    <!-- style menus -->
+
+    <!-- style modal/efeitos -->
+    <link rel="stylesheet" href="css/modal.css">
+    <!-- style modal/efeitos -->
+
+    <!-- style barra de navegação -->
+    <link rel="stylesheet" href="css/nav.css">
+    <!-- style barra de navegação -->
+
+    <!-- style processos -->
+    <link rel="stylesheet" href="css/process.css">
+    <!-- style processos -->
+
+    <!-- style responsivo -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- style responsivo -->
+
+    <!-- style reveal/efeitos -->
+    <link rel="stylesheet" href="css/reveal.css">
+    <!-- style reveal/efeitos -->
+
+    <!-- style cores -->
+    <link rel="stylesheet" href="css/root.css">
+    <!-- style cores -->
+
+    <!-- style quem-somos -->
+    <link rel="stylesheet" href="css/about.css">
+    <!-- style quem-somos -->
+
+    <!-- style geral -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- style geral -->
+
+    <!-- style timeline -->
+    <link rel="stylesheet" href="css/timeline.css">
+    <!-- style timeline -->
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container nav">
+            <a href="#home" class="logo">
+                <img src="img/logo Artemis.png" alt="logo">
+                <span>Ártemis</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#referencia">Conheça o Projeto</a></li>
+                <li><a href="#processo">Processo</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#linha-tempo">Linha do Tempo</a></li>
+                <li><a href="#minigame">Minigame</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <main class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-content reveal">
+                <span class="badge"><i class="fa-solid fa-wheat-awn"></i> Cerveja artesanal com identidade</span>
+                <h1>Conheça a Ártemis <span>com toques gregos.</span></h1>
+                <p>
+                    Inspirada na força e elegância da mitologia grega, a Artemis une tradição,
+                    criatividade e produção artesanal para entregar uma experiência marcante em
+                    cada detalhe.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#processo" class="btn btn-primary">Saiba Mais <i class="fa-solid fa-arrow-right"></i></a>
+                    <button class="btn btn-light open-process-modal" data-title="Nossa proposta"
+                        data-image="img/modelos.jpeg"
+                        data-text="Criamos cervejas com equilíbrio entre técnica, criatividade e ingredientes selecionados. A proposta é valorizar sabor, aroma, textura e experiência em cada detalhe.">
+                        Nossa proposta
+                    </button>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <strong>20</strong>
+                        <span>Litros produzidos</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>100%</strong>
+                        <span>Produção artesanal</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>+Sabor</strong>
+                        <span>Experiência sensorial</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal">
+                <div class="beer-card">
+                    <div class="beer-image-placeholder"></div>
+                </div>
+                <div class="floating-info">
+                    <i class="fa-solid fa-flask"></i>
+                    <h3>Ártemis - Equilíbrio e Precisão</h3>
+                    <p>Onde a criatividade deixou de ser pensamento
+                        e passou a se tornar transformação.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- QUEM SOMOS -->
+    <section id="referencia">
+        <div class="container">
+            <div class="section-head center reveal">
+                <span class="badge"><i class="fa-solid fa-layer-group"></i> Referência</span>
+                <h2>Ártemis - Deusa do Equilíbrio e da Precisão</h2>
+                <p>Conheça um pouco mais a ideia da referência grega.</p>
+            </div>
+
+            <div class="process-about">
+                <div class="process-card reveal open-process-modal" data-title="Entenda a Referência"
+                    data-image="img/icon.png"
+                    data-text="O nome Ártemis foi escolhido para representar equilíbrio, estratégia e precisão. Inspirado na mitologia grega, o projeto une identidade visual marcante, conceito artesanal e uma proposta moderna voltada à experiência e qualidade da cerveja.">
+                    <div class="process-icon">
+                        <img src="img/icon.png" alt="icon">
+                    </div>
+                    <div class="process-number">Deusa Grega</div>
+                    <h3>Por que Ártemis?</h3>
+                    <p>Uma cerveja leve, equilibrada e pensada para momentos de descontração.</p>
+                    <span class="process-action">
+                        Saiba Mais <img src="img/flecha.png" alt="flecha">
+                    </span>
+                </div>
+
+                <div class="process-card reveal open-process-modal" data-title="Cerveja Grega"
+                    data-image="img/icon2.png"
+                    data-text="Os elementos gregos representam estratégia, equilíbrio e tradição. A identidade visual do projeto foi inspirada na mitologia clássica para transmitir personalidade, elegância e uma conexão forte com o conceito da marca Ártemis.">
+                    <div class="process-icon">
+                        <img src="img/icon2.png" alt="icon2">
+                    </div>
+                    <div class="process-number">Refinado</div>
+                    <h3>Toques Gregos</h3>
+                    <p>Inspiração clássica que traz identidade, estilo e personalidade ao projeto.</p>
+                    <span class="process-action">
+                        Saiba Mais <img src="img/flecha.png" alt="flecha">
+                    </span>
+                </div>
+
+                <div class="process-card reveal open-process-modal" data-title="Equilbrio com Precisão"
+                    data-image="img/icon3.png"
+                    data-text="Equilíbrio e precisão representam a essência do projeto Ártemis. Cada detalhe da produção foi pensado para unir controle, qualidade e consistência, garantindo uma cerveja com identidade marcante, sabor harmonioso e uma experiência refinada em cada etapa.">
+                    <div class="process-icon">
+                        <img src="img/icon3.png" alt="equilibrio">
+                    </div>
+                    <div class="process-number">Conceitos</div>
+                    <h3>Equilíbrio e Precisão</h3>
+                    <p>Controle, qualidade e organização em cada etapa da produção.</p>
+                    <span class="process-action">
+                        Saiba Mais <img src="img/flecha.png" alt="flecha">
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section id="processo" class="section-process">
+        <div class="container">
+            <div class="section-head-process reveal">
+                <span class="badge">
+                    <i class="fa-solid fa-gears"></i>
+                    Como trabalhamos?
+                </span>
+                <h2>Conheça nossa metodologia.</h2>
+                <p>Saiba mais sobre nosso processo e desenvolvimento do projeto.</p>
+            </div>
+
+            <div class="process-area">
+                <div class="process-card reveal open-process-modal" data-title="Receita" data-image="img/receita.png"
+                    data-text="A etapa de receita define a identidade da cerveja. Aqui são escolhidos o estilo, os maltes, lúpulos, levedura, corpo, aroma, amargor e o objetivo sensorial final.">
+                    <div class="process-icon">
+                        <img src="img/receita.png" alt="receita">
+                    </div>
+                    <div class="process-number">Etapa 01</div>
+                    <h3>Receita</h3>
+                    <p>Definição do estilo, ingredientes e objetivo sensorial da cerveja.</p>
+                    <span class="process-action">
+                        Ver processo <img src="img/flecha.png" alt="flecha">
+                    </span>
+                </div>
+
+                <div class="process-card reveal open-process-modal" data-title="Mostura" data-image="img/mostura.png"
+                    data-text="Na mostura, os grãos são misturados à água em temperatura controlada. Essa etapa extrai açúcares fermentáveis, cor, corpo e estrutura para formar a base da cerveja.">
+                    <div class="process-icon">
+                        <img src="img/mostura.png" alt="mostura">
+                    </div>
+                    <div class="process-number">Etapa 02</div>
+                    <h3>Mostura</h3>
+                    <p>Extração dos açúcares, cor e corpo a partir dos grãos.</p>
+                    <span class="process-action">
+                        Ver processo <img src="img/flecha.png" alt="flecha">
+                    </span>
+                </div>
+
+                <div class="process-card reveal open-process-modal" data-title="Fermentação"
+                    data-image="img/fermentacao.png"
+                    data-text="Durante a fermentação, a levedura transforma os açúcares em álcool e gás carbônico. Essa fase influencia diretamente aroma, sabor, equilíbrio e personalidade da cerveja.">
+                    <div class="process-icon">
+                        <img src="img/fermentacao.png" alt="mostura">
+                    </div>
+                    <div class="process-number">Etapa 03</div>
+                    <h3>Fermentação</h3>
+                    <p>Transformação dos açúcares em álcool, gás e compostos aromáticos.</p>
+                    <span class="process-action">
+                        Ver processo <img src="img/flecha.png" alt="flecha">
+                    </span>
+                </div>
+
+                <div class="process-card reveal open-process-modal" data-title="Maturação"
+                    data-image="img/maturacao.png"
+                    data-text="A maturação refina a cerveja. Nessa fase, sabores se equilibram, aromas se estabilizam e a bebida ganha acabamento mais limpo, agradável e profissional.">
+                    <div class="process-icon">
+                        <img src="img/maturacao.png" alt="mostura">
+                    </div>
+                    <div class="process-number">Etapa 04</div>
+                    <h3>Maturação</h3>
+                    <p>Refinamento do sabor, estabilidade e acabamento final da bebida.</p>
+                    <span class="process-action">
+                        Ver processo <img src="img/flecha.png" alt="flecha">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="process-modal-overlay" id="processModal">
+        <div class="process-modal-box">
+
+            <button class="process-modal-close" id="processModalClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- IMAGEM GRANDE -->
+            <div class="process-modal-banner">
+                <img id="processModalImage" src="" alt="">
+            </div>
+
+            <!-- CONTEÚDO -->
+            <div class="process-modal-content">
+                <span class="process-modal-badge">
+                    <i class="fa-solid fa-beer-mug-empty"></i>
+                    Processo Artesanal
+                </span>
+
+                <h2 id="processModalTitle">Título</h2>
+
+                <p id="processModalText">
+                    Texto do processo.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- GALERIA / QR CODES -->
+    <section id="galeria">
+
+        <div class="container">
+
+            <div class="section-head center reveal">
+                <span class="badge">
+                    <i class="fa-solid fa-qrcode"></i>
+                    Conecte-se com Artemis
+                </span>
+
+                <h2>Explore nossa experiência artesanal.</h2>
+
+                <p>
+                    Escaneie os QR Codes para acessar conteúdos exclusivos,
+                    redes sociais e experiências interativas.
+                </p>
+            </div>
+
+            <!-- QR CODES -->
+            <div class="qr-wrapper">
+
+                <!-- QR 01 -->
+                <div class="qr-card reveal">
+                    <div class="qr-glow"></div>
+
+                    <img src="img/qrcode.png" alt="QR Code Instagram">
+
+                    <div class="qr-content">
+                        <strong>Google Drive</strong>
+
+                        <span>
+                            Escaneie e acompanhe novidades, bastidores
+                            e lançamentos da Ártemis.
+                        </span>
+                    </div>
+                </div>
+
+                <!-- QR 02 -->
+                <div class="qr-card reveal">
+                    <div class="qr-glow"></div>
+
+                    <img src="img/qrcode.png" alt="QR Code Cardápio">
+
+                    <div class="qr-content">
+                        <strong>Documentação</strong>
+
+                        <span>
+                            Explore o projeto de forma direta e formal, entendendo os processos de maneira teórica.
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- BOTÃO -->
+            <div class="minigame-area reveal">
+                <a id="minigame" class="btn btn-primary minigame-btn">
+
+                    <i class="fa-solid fa-gamepad"></i>
+                    Jogar MiniGame Ártemis
+
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- linha do tempo -->
+    <section class="timeline-section" id="linha-tempo">
+
+        <div class="container">
+
+            <!-- TOPO -->
+            <div class="timeline-heading reveal">
+
+                <span class="timeline-badge">
+                    <i class="fa-solid fa-timeline"></i>
+                    Linha do Tempo
+                </span>
+
+                <h2>Atualização semanal do projeto</h2>
+
+                <p>
+                    Esta área foi criada para acompanhar a evolução do projeto Artemis,
+                    reunindo registros, atividades, ATAs, fotos e avanços realizados a cada semana.
+                </p>
+
+            </div>
+
+            <!-- TIMELINE -->
+            <div class="timeline-wrapper reveal">
+
+                <button class="timeline-control" id="timeline-prev" type="button">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div class="timeline-track" id="scroll-timeline">
+
+                    <!-- CARD -->
+                    <article class="timeline-card">
+                        <span>Semana 1</span>
+                        <strong>16/02</strong>
+
+                        <p>
+                            Organização das ideias, definição do nome Artemis e primeiros conceitos
+                            da identidade visual do projeto.
+                        </p>
+                    </article>
+
+                    <!-- CARD -->
+                    <article class="timeline-card">
+                        <span>Semana 2</span>
+                        <strong>23/02</strong>
+
+                        <p>
+                            Pesquisa técnica, levantamento de materiais e estudo da estrutura inicial
+                            do sistema e do portfólio.
+                        </p>
+                    </article>
+
+                    <!-- CARD -->
+                    <article class="timeline-card">
+                        <span>Semana 3</span>
+                        <strong>02/03</strong>
+
+                        <p>
+                            Desenvolvimento do primeiro protótipo, divisão de tarefas e planejamento
+                            das funcionalidades principais.
+                        </p>
+                    </article>
+
+                    <!-- CARD -->
+                    <article class="timeline-card">
+                        <span>Semana 4</span>
+                        <strong>23/03</strong>
+
+                        <p>
+                            Evolução da montagem física, validação das ideias e melhorias na apresentação
+                            técnica do projeto.
+                        </p>
+                    </article>
+
+                    <!-- CARD -->
+                    <article class="timeline-card">
+                        <span>Semana 5</span>
+                        <strong>08/05</strong>
+
+                        <p>
+                            Primeira versão do site publicada, revisão visual, organização dos textos
+                            e ajustes das seções principais.
+                        </p>
+                    </article>
+
+                    <!-- CARD -->
+                    <article class="timeline-card">
+                        <span>Semana 6</span>
+                        <strong>09/05</strong>
+
+                        <p>
+                            Testes finais, correções de apresentação e preparação do projeto para
+                            futuras atualizações semanais.
+                        </p>
+                    </article>
+
+                </div>
+
+                <button class="timeline-control" id="timeline-next" type="button">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <span class="logo-icon"><img src="img/logo-secundario-artemis.jpeg" alt="logo"></span>
+                        <span>Ártemis</span>
+                    </div>
+                    <p>Portfólio moderno para apresentação de cerveja artesanal, produção, estilos e identidade visual
+                        do projeto.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fa-brands fa-github"></i></a> Github
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#referencia">Conheça o Projeto</a></li>
+                        <li><a href="#processo">Processo</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Projeto</h3>
+                    <ul>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#linha-tempo">Linha do Tempo</a></li>
+                        <li><a href="#minigame">Minigame</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Informações</h3>
+                    <p><i class="fa-solid fa-location"></i> Centro Universitário Senac</p>
+                    <p><i class="fa-solid fa-location-dot"></i> São Paulo / SP</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Ártemis. Todos os direitos reservados.</p>
+                <p>Desenvolvido para apresentação profissional.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box">
+            <button class="modal-close" id="modalClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <!-- IMAGEM -->
+            <div class="modal-image">
+                <img id="modalImage" src="" alt="">
+            </div>
+            <!-- ÍCONE -->
+            <div class="modal-icon">
+                <i id="modalIcon" class="fa-solid fa-beer-mug-empty"></i>
+            </div>
+            <!-- TÍTULO -->
+            <h2 id="modalTitle">Título</h2>
+            <!-- TEXTO -->
+            <p id="modalText">Texto do popup.</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/popups.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/headerscroll.js"></script>
+
+
+</body>
+
+</html>

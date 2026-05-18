@@ -1,0 +1,25 @@
+.nav {
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.25s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--primary);
+}

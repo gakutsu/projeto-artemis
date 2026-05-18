@@ -1,0 +1,60 @@
+/* HEADER */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    backdrop-filter: blur(18px);
+    background: var(--transparent);
+    border-bottom: 1px solid var(--border);
+    transition:
+        transform .45s ease,
+        opacity .35s ease,
+        background .35s ease,
+        box-shadow .35s ease,
+        padding .35s ease;
+}
+
+/* HEADER AO ROLAR */
+.site-header.scrolled {
+    background: rgba(8, 10, 18, 0.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ESCONDER HEADER */
+.site-header.hide-header {
+    transform: translateY(-120%);
+    opacity: 0;
+}
+
+/* MOSTRAR HEADER */
+.site-header.show-header {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* SUAVIZA MENU */
+.site-header .nav {
+    transition: all .35s ease;
+}
+
+body.dark-mode .site-header {
+    background: rgba(15, 17, 21, 0.72);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 70px;
+}
+
+.logo span {
+    color: var(--title-hero);
+}
