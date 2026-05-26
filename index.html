@@ -87,6 +87,10 @@
     <!-- style timeline -->
     <link rel="stylesheet" href="css/timeline.css">
     <!-- style timeline -->
+
+    <!-- style minigame -->
+    <link rel="stylesheet" href="css/minigame.css">
+    <!-- style minigame -->
 </head>
 
 <body>
@@ -381,15 +385,212 @@
             </div>
 
             <!-- BOTÃO -->
-            <div class="minigame-area reveal">
-                <a id="minigame" class="btn btn-primary minigame-btn">
+            <div class="minigame-area reveal" id="minigame">
+                <button class="btn btn-primary minigame-btn" type="button" data-minigame-open
+                    aria-controls="artemis-game-panel" aria-expanded="false">
 
                     <i class="fa-solid fa-gamepad"></i>
                     Jogar MiniGame Ártemis
 
-                </a>
+                </button>
             </div>
 
+            <div class="minigame-panel" id="artemis-game-panel" data-minigame-panel hidden>
+                <div class="minigame-copy">
+                    <span class="badge"><i class="fa-solid fa-beer-mug-empty"></i> Experiência interativa</span>
+                    <h2>A corrida de Ártemis</h2>
+                    <p>
+                        Salte pelos obstáculos e avance pelas etapas da produção artesanal até o brinde final.
+                    </p>
+                </div>
+
+                <div class="artemis-game-shell" data-artemis-run>
+                    <div class="artemis-game-topbar">
+                        <div>
+                            <span class="artemis-label">Etapa</span>
+                            <strong data-stage>Receita</strong>
+                        </div>
+                        <div>
+                            <span class="artemis-label">Pontos</span>
+                            <strong data-score>00000</strong>
+                        </div>
+                        <div>
+                            <span class="artemis-label">Recorde</span>
+                            <strong data-best>00000</strong>
+                        </div>
+                    </div>
+
+                    <canvas class="artemis-game-canvas" width="960" height="420"
+                        aria-label="Jogo A corrida de Ártemis"></canvas>
+
+                    <div class="artemis-game-overlay" data-overlay>
+                        <strong data-overlay-title>A corrida de Ártemis</strong>
+                        <span data-overlay-text>Pressione espaço, clique ou toque para começar.</span>
+                        <button class="artemis-game-button" type="button" data-start>
+                            Iniciar
+                        </button>
+                    </div>
+
+                    <div class="artemis-game-controls">
+                        <button class="artemis-game-button" type="button" data-jump>
+                            Pular
+                        </button>
+                        <button class="artemis-game-button artemis-game-button--ghost" type="button" data-reset>
+                            Reiniciar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTÃO MEMBROS -->
+            <div class="group-area reveal">
+                <button class="btn btn-light group-btn" type="button" id="openGroupCard">
+                    <i class="fa-solid fa-users"></i>
+                    Conhecer Membros do Grupo
+                </button>
+            </div>
+
+            <!-- CARD/PÁGINA CENTRALIZADA -->
+            <div class="group-page-overlay" id="groupPageOverlay">
+                <div class="group-page-card">
+
+                    <button class="group-page-close" id="closeGroupCard">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <div class="group-page-head">
+                        <span class="badge">
+                            <i class="fa-solid fa-user-group"></i>
+                            Equipe Artemis
+                        </span>
+
+                        <h2>Membros do Grupo</h2>
+
+                        <p>
+                            Conheça os integrantes responsáveis pelo desenvolvimento,
+                            conceito e apresentação do projeto Ártemis.
+                        </p>
+                    </div>
+
+                    <div class="members-grid">
+
+                        <div class="member-card open-member-modal" data-name="Alan Almeida" data-role="Artigo e Design"
+                            data-text="Responsável pelo apoio na construção do artigo e pela parte visual do projeto, contribuindo com organização estética, identidade e apresentação.">
+                            <div class="member-avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <h3>Alan Almeida</h3>
+                            <span>Artigo e Design</span>
+                        </div>
+
+                        <div class="member-card open-member-modal" data-name="Ana Carolina Vieira"
+                            data-role="Documentação e Design"
+                            data-text="Responsável pela documentação do projeto e apoio no design, ajudando a estruturar informações, organizar conteúdos e manter a apresentação visual consistente.">
+                            <div class="member-avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <h3>Ana Carolina Vieira</h3>
+                            <span>Documentação e Design</span>
+                        </div>
+
+                        <div class="member-card open-member-modal" data-name="Francisco Nisvaldo"
+                            data-role="Pesquisa e Caderno"
+                            data-text="Responsável por contribuir com pesquisas e organização do caderno do projeto, reunindo informações importantes para a construção teórica e prática.">
+                            <div class="member-avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <h3>Francisco Nisvaldo</h3>
+                            <span>Pesquisa e Caderno</span>
+                        </div>
+
+                        <div class="member-card open-member-modal" data-name="Gustavo Akutsu"
+                            data-role="Programação do Site e Circuito"
+                            data-text="Responsável pelo desenvolvimento do site e apoio no circuito, transformando a proposta do projeto em uma experiência digital funcional e interativa.">
+                            <div class="member-avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <h3>Gustavo Akutsu</h3>
+                            <span>Programação do Site e Circuito</span>
+                        </div>
+
+                        <div class="member-card open-member-modal" data-name="Lucca Gonçalves Ramos"
+                            data-role="Pesquisa e Programação do Site"
+                            data-text="Responsável por pesquisas e apoio na programação do site, contribuindo para o conteúdo técnico e para a construção da experiência digital.">
+                            <div class="member-avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <h3>Lucca Gonçalves Ramos</h3>
+                            <span>Pesquisa e Programação do Site</span>
+                        </div>
+
+                        <div class="member-card open-member-modal" data-name="Matheus Augusto Assunção"
+                            data-role="Circuito"
+                            data-text="Responsável pelo desenvolvimento e apoio na parte do circuito, colaborando na montagem, testes e funcionamento da proposta física do projeto.">
+                            <div class="member-avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <h3>Matheus Augusto Assunção</h3>
+                            <span>Circuito</span>
+                        </div>
+
+                        <div class="member-card open-member-modal" data-name="Nathália Leite"
+                            data-role="Artigo e Design"
+                            data-text="Responsável por contribuir no artigo e na parte visual, auxiliando na identidade do projeto e na apresentação organizada das ideias.">
+                            <div class="member-avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <h3>Nathália Leite</h3>
+                            <span>Artigo e Design</span>
+                        </div>
+
+                        <div class="member-card open-member-modal" data-name="Raquel Silva"
+                            data-role="Documentação e Artigo"
+                            data-text="Responsável pela documentação e apoio no artigo, ajudando a registrar etapas, organizar informações e fortalecer a base teórica do projeto.">
+                            <div class="member-avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <h3>Raquel Silva</h3>
+                            <span>Documentação e Artigo</span>
+                        </div>
+
+                        <div class="member-card member-leader open-member-modal" data-name="Vinícius Pedroso Tytko"
+                            data-role="Circuito"
+                            data-text="Líder do grupo e responsável pelo circuito, acompanhando a organização da equipe, o andamento das etapas e a execução da parte prática do projeto.">
+                            <div class="leader-badge">
+                                <i class="fa-solid fa-crown"></i>
+                                Líder
+                            </div>
+
+                            <div class="member-avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <h3>Vinícius Pedroso Tytko</h3>
+                            <span>Circuito</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- modal membros -->
+        <div class="member-modal-overlay" id="memberModal">
+            <div class="member-modal-box">
+                <button class="member-modal-close" id="memberModalClose">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div class="member-modal-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <span id="memberModalRole">Função</span>
+                <h2 id="memberModalName">Nome</h2>
+                <p id="memberModalText">Descrição da função.</p>
+            </div>
         </div>
 
     </section>
@@ -516,7 +717,7 @@
                         do projeto.</p>
                     <div class="socials">
                         <a href="https://github.com/gakutsu/projeto-artemis.git" target="_blank">
-                            <i class="fa-brands fa-github"></i> 
+                            <i class="fa-brands fa-github"></i>
                         </a> Github
                     </div>
                 </div>
@@ -578,6 +779,8 @@
     <script src="js/popups.js"></script>
     <script src="js/timeline.js"></script>
     <script src="js/headerscroll.js"></script>
+    <script src="js/artemis-run.js"></script>
+    <script src="js/minigame-entry.js"></script>
 
 
 </body>

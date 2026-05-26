@@ -63,3 +63,72 @@ document.querySelectorAll('.open-modal').forEach(button => {
     });
 
 });
+
+// membros do grupo
+
+const openGroupCard = document.getElementById('openGroupCard');
+const closeGroupCard = document.getElementById('closeGroupCard');
+const groupPageOverlay = document.getElementById('groupPageOverlay');
+
+openGroupCard.addEventListener('click', () => {
+    groupPageOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+});
+
+closeGroupCard.addEventListener('click', () => {
+    groupPageOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+});
+
+groupPageOverlay.addEventListener('click', (event) => {
+    if (event.target === groupPageOverlay) {
+        groupPageOverlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        groupPageOverlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
+
+// popup membros
+const memberModal = document.getElementById('memberModal');
+const memberModalClose = document.getElementById('memberModalClose');
+const memberModalName = document.getElementById('memberModalName');
+const memberModalRole = document.getElementById('memberModalRole');
+const memberModalText = document.getElementById('memberModalText');
+
+document.querySelectorAll('.open-member-modal').forEach(card => {
+    card.addEventListener('click', () => {
+        memberModalName.textContent = card.dataset.name;
+        memberModalRole.textContent = card.dataset.role;
+        memberModalText.textContent = card.dataset.text;
+
+        memberModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+function closeMemberModal() {
+    memberModal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+memberModalClose.addEventListener('click', closeMemberModal);
+
+memberModal.addEventListener('click', (event) => {
+    if (event.target === memberModal) {
+        closeMemberModal();
+    }
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        closeMemberModal();
+    }
+});
+
+// membros do grupo

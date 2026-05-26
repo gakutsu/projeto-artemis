@@ -1,0 +1,209 @@
+/* MINIGAME */
+.minigame-area {
+    scroll-margin-top: 110px;
+}
+
+.minigame-btn {
+    align-items: center;
+}
+
+.minigame-panel {
+    width: min(1080px, 100%);
+    margin: 34px auto 0;
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    scroll-margin-top: 110px;
+}
+
+.minigame-panel[hidden] {
+    display: none;
+}
+
+.minigame-panel.is-open {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.minigame-copy {
+    max-width: 720px;
+    margin: 0 auto 24px;
+    text-align: center;
+}
+
+.minigame-copy h2 {
+    margin-bottom: 12px;
+    color: var(--text);
+    font-size: 3rem;
+    line-height: 1.05;
+}
+
+.minigame-copy p {
+    margin: 0 auto;
+    max-width: 620px;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.artemis-game-shell {
+    position: relative;
+    overflow: hidden;
+    min-width: 0;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.78), rgba(243, 195, 107, 0.16)),
+        var(--card);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(16px);
+}
+
+body.dark-mode .artemis-game-shell {
+    background:
+        linear-gradient(145deg, rgba(27, 31, 40, 0.9), rgba(240, 173, 69, 0.1)),
+        var(--card);
+}
+
+.artemis-game-topbar {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 12px;
+    align-items: center;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.artemis-game-topbar > div {
+    min-width: 0;
+}
+
+.artemis-label {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.artemis-game-topbar strong {
+    display: block;
+    color: var(--text);
+    font-size: 1.08rem;
+    line-height: 1.15;
+    white-space: nowrap;
+}
+
+.artemis-game-canvas {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    min-height: clamp(340px, 44vh, 520px);
+    background: #f8efdf;
+    touch-action: manipulation;
+}
+
+.artemis-game-overlay {
+    position: absolute;
+    inset: 58px 0 0;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    color: #fffaf2;
+    background: rgba(31, 19, 9, 0.44);
+}
+
+.artemis-game-overlay[hidden] {
+    display: none;
+}
+
+.artemis-game-overlay strong {
+    font-size: 2.6rem;
+    line-height: 1;
+}
+
+.artemis-game-overlay span {
+    max-width: 380px;
+    color: rgba(255, 250, 242, 0.84);
+    line-height: 1.45;
+}
+
+.artemis-game-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    border: 0;
+    border-radius: 999px;
+    padding: 0 18px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    box-shadow: 0 12px 24px rgba(155, 79, 16, 0.24);
+    font: inherit;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.artemis-game-button:focus-visible {
+    outline: 3px solid rgba(201, 131, 34, 0.45);
+    outline-offset: 3px;
+}
+
+.artemis-game-button--ghost {
+    color: var(--text);
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    box-shadow: none;
+}
+
+.artemis-game-controls {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 12px;
+    border-top: 1px solid var(--border);
+}
+
+@media (max-width: 860px) {
+    .minigame-panel {
+        width: 100%;
+    }
+
+    .artemis-game-canvas {
+        min-height: clamp(280px, 44vh, 440px);
+    }
+}
+
+@media (max-width: 620px) {
+    .minigame-copy h2 {
+        font-size: 2.2rem;
+    }
+
+    .artemis-game-overlay strong {
+        font-size: 1.7rem;
+    }
+
+    .artemis-game-topbar {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .artemis-game-topbar > div:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .artemis-game-canvas {
+        min-height: 260px;
+    }
+
+    .artemis-game-overlay {
+        inset: 88px 0 58px;
+    }
+
+    .artemis-game-controls {
+        display: grid;
+    }
+}
