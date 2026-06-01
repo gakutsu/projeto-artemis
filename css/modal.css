@@ -347,3 +347,79 @@
      }
 
  }
+
+ /* POPUP PROCESSO - SCROLL MOBILE */
+ @media (max-width: 768px) {
+
+     .process-modal-overlay {
+         align-items: flex-start;
+         justify-content: center;
+
+         padding: 14px;
+
+         overflow-y: auto;
+         overflow-x: hidden;
+
+         -webkit-overflow-scrolling: touch;
+     }
+
+     .process-modal-box {
+         width: 100%;
+         max-width: 100%;
+
+         max-height: calc(100dvh - 28px);
+
+         overflow-y: auto;
+         overflow-x: hidden;
+
+         margin: 0 auto;
+
+         border-radius: 24px;
+
+         -webkit-overflow-scrolling: touch;
+     }
+
+     .process-modal-banner,
+     .process-modal-image {
+         width: 100%;
+         height: auto;
+         max-height: 230px;
+         overflow: hidden;
+     }
+
+     .process-modal-banner img,
+     .process-modal-image img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+     }
+
+     .process-modal-content {
+         padding: 24px;
+     }
+
+     .process-modal-content h2,
+     .process-modal-box h2 {
+         font-size: 1.8rem;
+         line-height: 1.15;
+     }
+
+     .process-modal-content p,
+     .process-modal-box p {
+         font-size: 0.95rem;
+         line-height: 1.75;
+     }
+
+     .process-modal-box::-webkit-scrollbar {
+         width: 6px;
+     }
+
+     .process-modal-box::-webkit-scrollbar-thumb {
+         background: #c98322;
+         border-radius: 999px;
+     }
+
+     .process-modal-box::-webkit-scrollbar-track {
+         background: rgba(0, 0, 0, .08);
+     }
+ }
