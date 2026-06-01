@@ -137,7 +137,79 @@
      .members-modal::-webkit-scrollbar-track {
          background: rgba(0, 0, 0, .08);
      }
+ }
 
+ /* RESPONSIVO - SCROLL DOS POPUPS */
+ @media (max-width: 768px) {
+
+     .modal-overlay,
+     .process-modal-overlay,
+     .timeline-gallery-overlay,
+     .group-page-overlay,
+     .member-modal-overlay {
+         padding: 14px;
+         align-items: flex-start;
+         justify-content: center;
+         overflow-y: auto;
+         overflow-x: hidden;
+         -webkit-overflow-scrolling: touch;
+     }
+
+     .modal-box,
+     .process-modal-box,
+     .timeline-gallery-page,
+     .group-page-card,
+     .member-modal-box {
+         width: 100%;
+         max-width: 100%;
+         max-height: calc(100dvh - 28px);
+         overflow-y: auto;
+         overflow-x: hidden;
+         border-radius: 24px;
+         -webkit-overflow-scrolling: touch;
+     }
+
+     .modal-image,
+     .process-modal-banner,
+     .process-modal-image {
+         width: 100%;
+         max-width: 100%;
+         height: auto;
+         max-height: 260px;
+     }
+
+     .modal-image img,
+     .process-modal-banner img,
+     .process-modal-image img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+     }
+
+     .modal-box::-webkit-scrollbar,
+     .process-modal-box::-webkit-scrollbar,
+     .timeline-gallery-page::-webkit-scrollbar,
+     .group-page-card::-webkit-scrollbar,
+     .member-modal-box::-webkit-scrollbar {
+         width: 6px;
+     }
+
+     .modal-box::-webkit-scrollbar-thumb,
+     .process-modal-box::-webkit-scrollbar-thumb,
+     .timeline-gallery-page::-webkit-scrollbar-thumb,
+     .group-page-card::-webkit-scrollbar-thumb,
+     .member-modal-box::-webkit-scrollbar-thumb {
+         background: #c98322;
+         border-radius: 999px;
+     }
+
+     .modal-box::-webkit-scrollbar-track,
+     .process-modal-box::-webkit-scrollbar-track,
+     .timeline-gallery-page::-webkit-scrollbar-track,
+     .group-page-card::-webkit-scrollbar-track,
+     .member-modal-box::-webkit-scrollbar-track {
+         background: rgba(0, 0, 0, .08);
+     }
  }
 
  /* popup processo */
