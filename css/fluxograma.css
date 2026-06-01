@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    background: #f5f2ea;
+}
+
+.flowchart-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.flowchart-topbar {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    background: white;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+    z-index: 10;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: #c98322;
+    font-weight: 700;
+}
+
+.flowchart-tools {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.flowchart-tools button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #c98322;
+    color: white;
+    cursor: pointer;
+}
+
+#zoomValue {
+    min-width: 70px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.flowchart-container {
+    flex: 1;
+    overflow: auto;
+    cursor: grab;
+    background:
+        radial-gradient(circle at center,
+            #fff,
+            #f2ede3);
+}
+
+.flowchart-container.dragging {
+    cursor: grabbing;
+}
+
+.flowchart-container img {
+    display: block;
+    margin: 40px auto;
+    min-width: auto;
+    max-width: 1900px;
+    transform-origin: top left;
+    user-select: none;
+}
