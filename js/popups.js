@@ -4,6 +4,7 @@ const modalImage = document.getElementById('modalImage');
 const processModalTitle = document.getElementById('processModalTitle');
 const processModalText = document.getElementById('processModalText');
 const processModalImage = document.getElementById('processModalImage');
+const memberModalImage = document.getElementById('memberModalImage');
 
 document.querySelectorAll('.open-process-modal').forEach(card => {
 
@@ -129,6 +130,22 @@ document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
         closeMemberModal();
     }
+});
+
+document.querySelectorAll('.open-member-modal').forEach(card => {
+
+    card.addEventListener('click', () => {
+
+        memberModalName.textContent = card.dataset.name;
+        memberModalRole.textContent = card.dataset.role;
+        memberModalText.textContent = card.dataset.text;
+
+        memberModalImage.src = card.dataset.image;
+
+        memberModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
 });
 
 // membros do grupo

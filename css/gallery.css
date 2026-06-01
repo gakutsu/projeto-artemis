@@ -372,20 +372,25 @@
 }
 
 .member-modal-avatar {
-    width: 92px;
-    height: 92px;
+    width: 120px;
+    height: 120px;
 
     margin: 0 auto 20px;
 
-    display: grid;
-    place-items: center;
-
     border-radius: 50%;
+    overflow: hidden;
 
-    background: linear-gradient(135deg, #c98322, #f3c36b);
+    border: 4px solid #c98322;
 
-    color: #fff;
-    font-size: 2rem;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.15);
+}
+
+.member-modal-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 #memberModalRole {
@@ -431,3 +436,43 @@
 }
 
 /* membros do grupo */
+
+/* etiqueta documentação */
+.qr-card {
+    position: relative;
+}
+
+.coming-soon-badge {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(135deg,
+            #c98322,
+            #f3c36b);
+
+    color: #fff;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+
+    z-index: 5;
+
+    box-shadow:
+        0 8px 20px rgba(201, 131, 34, .25);
+}
+
+.coming-soon-badge i {
+    font-size: 0.7rem;
+}
+
+/* etiqueta documentação */
