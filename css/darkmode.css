@@ -11,3 +11,59 @@ body.dark-mode {
     --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
     --footer: #090b0f;
 }
+
+/* CORREÇÃO DARK MODE */
+body.dark-mode {
+    background:
+        radial-gradient(circle at top left, rgba(240, 173, 69, 0.14), transparent 35%),
+        #0f1115 !important;
+    color: #f5f7fa;
+}
+
+/* Sections que ficaram brancas */
+body.dark-mode section,
+body.dark-mode .qr-section,
+body.dark-mode .timeline-section {
+    background-color: #0f1115;
+}
+
+/* Cards e blocos */
+body.dark-mode .modal-box,
+body.dark-mode .process-modal-box,
+body.dark-mode .group-page-card,
+body.dark-mode .member-modal-box,
+body.dark-mode .flowchart-viewer,
+body.dark-mode .qr-card,
+body.dark-mode .info-line,
+body.dark-mode .feature-card,
+body.dark-mode .process-card,
+body.dark-mode .stat-card {
+    background: #171b24;
+    color: #f5f7fa;
+    border-color: rgba(255, 255, 255, 0.10);
+}
+
+/* Títulos */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode strong {
+    color: #ffffff;
+}
+
+/* Textos */
+body.dark-mode p,
+body.dark-mode span {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Header */
+body.dark-mode .site-header {
+    background: rgba(15, 17, 21, 0.82);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Footer mantém escuro */
+body.dark-mode .footer {
+    background: #080a0f;
+}
