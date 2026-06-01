@@ -245,8 +245,8 @@
 }
 
 .member-avatar {
-    width: 88px;
-    height: 88px;
+    width: 90px;
+    height: 90px;
     margin: 0 auto 18px;
     border-radius: 50%;
     display: grid;
@@ -254,6 +254,14 @@
     background: linear-gradient(135deg, #c98322, #f3c36b);
     color: #fff;
     font-size: 2rem;
+    overflow: hidden;
+}
+
+.member-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .member-card h3 {
@@ -268,7 +276,7 @@
     font-size: 0.92rem;
 }
 
-/* LÍDER */ 
+/* LÍDER */
 .member-leader {
     border: 1px solid rgba(201, 131, 34, 0.35);
     box-shadow:
