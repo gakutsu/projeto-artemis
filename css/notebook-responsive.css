@@ -1,0 +1,71 @@
+/* RESPONSIVO PARA LAPTOP / NOTEBOOK */
+@media (min-width: 1024px) and (max-width: 1440px) {
+
+    .container {
+        width: min(1120px, calc(100% - 48px));
+    }
+
+    section {
+        padding: 80px 0;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 120px 0 70px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 42px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.4rem, 4vw, 4rem);
+        line-height: 1;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        max-width: 560px;
+    }
+
+    .beer-card {
+        min-height: 520px;
+    }
+
+    .beer-image-placeholder {
+        inset: 22px;
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .floating-info {
+        left: -10px;
+        bottom: 35px;
+        width: 235px;
+    }
+
+    .process-area,
+    .process-about {
+        gap: 20px;
+    }
+
+    .process-card {
+        min-height: 320px;
+        padding: 24px;
+    }
+
+    .qr-wrapper {
+        gap: 26px;
+    }
+
+    .qr-card {
+        width: 300px;
+        min-height: 400px;
+    }
+
+    .footer-grid {
+        gap: 28px;
+    }
+}
